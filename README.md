@@ -22,4 +22,4 @@
 - XML
 - Gradle
 
-Note: this is a reuploaded repo
+Note: This is a re-uploaded repository
