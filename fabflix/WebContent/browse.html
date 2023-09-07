@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <title>Browse</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">
+    Fabflix
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="top20.html">Top20</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="search.html">Search</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Browse <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="cart.html">Checkout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="text-center search-body">
+    <h1 class="mb-3">Browse Genres</h1>
+  </div>
+  <div class="genre-tags">
+    <ul id="genre_links" class="genre-list">
+    </ul>
+  </div>
+  <div class="text-center pt-5">
+    <h2 class="mb-3">Browse Titles</h2>
+  </div>
+  <div id="browse_links" class="browse-tags">
+    <ul id="browse_letters" class="browse-list">
+    </ul>
+    <ul id="browse_digits" class="browse-list">
+    </ul>
+  </div>
+</main>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to index.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="browse.js"></script>
+</body>
+
+
+</html>

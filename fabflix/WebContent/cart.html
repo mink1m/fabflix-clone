@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Fablix Cart</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+        Fabflix
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="top20.html">Top20</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.html">Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="browse.html">Browse</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Checkout <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <div class="container mt-5">
+        <div class="d-flex align-items-center justify-content-between">
+            <h3>Shopping Cart</h3>
+        </div>
+
+        <table id=movie_table class="table table-striped">
+            <!-- Create a table header -->
+            <thead class="thead-dark">
+            <tr>
+                <!-- Titles of each column-->
+                <th>Title</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <!-- Table body is left empty here, will be populated with the data retrieved with cart.js -->
+            <tbody id=shopping_cart_table_body></tbody>
+        </table>
+        <div class="d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4>Total</h4>
+                <h5 id="cart_total"></h5>
+            </div>
+            <form action="checkout.html">
+                <button type="submit" class="btn btn-block">Checkout</button>
+            </form>
+        </div>
+        <!--  cart_total contains total of the cart eg $XX.XX   -->
+    </div>
+</main>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="cart.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Fablix Login</title>
+
+</head>
+<body class="text-center login-body">
+    <form id="login_form" class="login-form" method="post" action="#">
+        <h1 class="mb-3">Fabflix</h1>
+        <div class="form-group">
+            <label for="email" class="sr-only">Email</label>
+            <input
+                    name="email"
+                    type="email"
+                    class="form-control invalid"
+                    id="email"
+                    placeholder="Email"
+                    required
+                    autofocus
+            >
+        </div>
+        <div class="form-group">
+            <label for="password" class="sr-only">Password</label>
+            <input
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                    required
+            >
+            <div id="login_error_message" class="login-error-message">
+
+            </div>
+        </div>
+        <button class="btn btn-lg btn-dark btn-block" type="submit" value="Login">Sign in</button>
+        <div class="d-flex justify-content-center pt-2">
+            <!--recaptcha site key-->
+            <div id="recaptcha"></div>
+        </div>
+    </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"></script>
+
+<script src="login.js"></script>
+
+</body>
+</html>

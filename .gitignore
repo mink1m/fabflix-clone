@@ -1,0 +1,22 @@
+# system files
+.DS_Store
+
+# secrets
+cs122b.pem
+.env
+
+# development
+.idea
+*.iml
+target/
+
+# recaptcha secret key
+RecaptchaConstants.java
+
+.gradle
+/local.properties
+/.idea
+/build
+/captures
+
+mobile_app/app/build/

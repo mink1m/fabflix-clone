@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="../style.css" rel="stylesheet">
+
+  <title>Add Star</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">
+    Fabflix
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="addstar.html">Add Star</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Add Movie <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="text-center search-body">
+    <form id="add_movie_form" class="search-form" method="post" action="#">
+      <h1 class="mb-3">Add Movie</h1>
+      <div class="form-group">
+        <label for="movie_title" class="sr-only">Movie</label>
+        <input
+                name="movie_title"
+                type="text"
+                class="form-control"
+                id="movie_title"
+                placeholder="Movie"
+                required
+        >
+      </div>
+      <div class="form-group">
+        <label for="movie_year" class="sr-only">Year</label>
+        <input
+                name="movie_year"
+                type="number"
+                class="form-control"
+                id="movie_year"
+                placeholder="Year"
+                required
+        >
+      </div>
+      <div class="form-group">
+        <label for="movie_director" class="sr-only">Director</label>
+        <input
+                name="movie_director"
+                type="text"
+                class="form-control"
+                id="movie_director"
+                placeholder="Director"
+                required
+        >
+      </div>
+      <div class="form-group">
+        <label for="star" class="sr-only">Star</label>
+        <input
+                name="star_name"
+                type="text"
+                class="form-control"
+                id="star"
+                placeholder="Star Name"
+                required
+        >
+      </div>
+      <div class="form-group">
+        <label for="genre_name" class="sr-only">Genre</label>
+        <input
+                name="genre_name"
+                type="text"
+                class="form-control"
+                id="genre_name"
+                placeholder="Genre"
+                required
+        >
+        <div id="add_movie_message" class="add-star-message">
+        </div>
+      </div>
+      <button class="btn btn-lg btn-dark btn-block" type="submit" value="search">Add</button>
+    </form>
+  </div>
+</main>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="addmovie.js"></script>
+</body>
+</html>

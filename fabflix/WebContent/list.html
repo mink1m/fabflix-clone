@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Results</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+        Fabflix
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="top20.html">Top20</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.html">Search</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="browse.html">Browse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart.html">Checkout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="mt-5">
+        <div class="d-flex align-items-center justify-content-between">
+            <h3>Results</h3>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="sort_by" class="">Sort By</label>
+                    <select id="sort_by" class="form-control form-control-sm ml-sm-2">
+                        <option value="0">Rating ↓ Title ↓</option>
+                        <option value="1">Rating ↓ Title ↑</option>
+                        <option value="2">Rating ↑ Title ↓</option>
+                        <option value="3">Rating ↑ Title ↑</option>
+                        <option value="4">Title ↓ Rating ↓</option>
+                        <option value="5">Title ↓ Rating ↑</option>
+                        <option value="6">Title ↑ Rating ↓</option>
+                        <option value="7">Title ↑ Rating ↑</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <table id=movie_table class="table table-striped">
+            <!-- Create a table header -->
+            <thead class="thead-dark">
+            <tr>
+                <!-- Titles of each column-->
+                <th>Title</th>
+                <th>Year</th>
+                <th>Director</th>
+                <th>Genres</th>
+                <th>Stars</th>
+                <th>Rating</th>
+                <th>Cart</th>
+            </tr>
+            </thead>
+            <!-- Table body is left empty here, will be populated with the data retrieved with index.js -->
+            <tbody id=movie_table_body></tbody>
+        </table>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+        <nav>
+            <ul class="pagination">
+                <li id="page_list" class="page-item">
+                    <a onclick="prevPage()" class="page-link" href="javascript:void(0);" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li id="next_page_elm" class="page-item">
+                    <a onclick="nextPage()" class="page-link" href="javascript:void(0);" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="pb-4">
+            <label for="num_results" class="sr-only">Sort By</label>
+            <select id="num_results" class="form-control form-control-sm">
+                <option value="10">10 results per page</option>
+                <option value="25">25 results per page</option>
+                <option value="50">50 results per page</option>
+                <option value="100">100 results per page</option>
+            </select>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to index.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="list.js"></script>
+<script src="cart.js"></script>
+
+</body>
+
+
+</html>
